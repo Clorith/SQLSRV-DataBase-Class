@@ -192,7 +192,7 @@ class SQLSRV_DataBase {
 			 */
 			$error = sqlsrv_errors();
 			$this->error[] = $error;
-			error_log( 'Database failure: ' . $error );
+			error_log( 'Database failure: ' . print_r($error) );
 			return false;
 		}
 		sqlsrv_configure( 'WarningsReturnAsErrors', true );
